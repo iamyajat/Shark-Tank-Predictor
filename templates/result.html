@@ -1,0 +1,28 @@
+{% extends "index.html" %} {% block resultpage %}
+<div class="content resultcontent">
+  <div class="heading result">
+    <h2>The probability of you getting a deal is : {{prediction}}</h2>
+  </div>
+  <br />
+  <div class="meme">
+    {% if prediction >= 0.4 and prediction < 0.70 %}
+    <img
+      src="https://i.kym-cdn.com/entries/icons/original/000/031/425/Screen_Shot_2019-10-09_at_10.41.04_AM.png"
+      alt="Good Meme :&#41;"
+    />
+    {% elif prediction >= 0.70 %}
+    <img
+      src="https://media.tenor.com/ZEmtfXy39AQAAAAd/thats-why-hes-the-goat-mvp.gif"
+      alt="Good Meme :&#41;"
+    />
+    {% else %}
+    <img
+      src="https://i0.wp.com/boingboing.net/wp-content/uploads/2016/11/bcf.png"
+      alt="Best Meme :&#41;&#41;"
+    />
+    {% endif %}
+  </div>
+  <br />
+  <button id="submit" onclick="window.location.href='/';">Back</button>
+</div>
+{% endblock %}

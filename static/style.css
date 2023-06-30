@@ -25,6 +25,7 @@ body {
   backdrop-filter: blur(5px);
   display: flex;
   justify-content: center;
+  align-items: center;
   flex-direction: column;
   animation: fadein 0.5s ease-in-out;
 }
@@ -44,6 +45,7 @@ body {
   bottom: 3px;
   color: #eaeaea;
   font-family: "Inter";
+  font-size: 2vh;
   text-align: center;
   width: 100%;
   letter-spacing: 1px;
@@ -91,7 +93,7 @@ body {
 .heading > h1 {
   position: relative;
   font-family: "Araboto";
-  font-size: 3em;
+  font-size: 5.3vh;
   text-transform: uppercase;
   left: -3px;
 }
@@ -99,13 +101,13 @@ body {
 .heading > h2 {
   font-family: "Inter";
   font-weight: 500;
-  font-size: 1.2em;
+  font-size: 2.3vh;
   text-transform: uppercase;
 }
 
 .heading > p {
   font-family: "Inter";
-  font-size: 1.1em;
+  font-size: 2.1vh;
   font-weight: 400;
 }
 
@@ -115,7 +117,7 @@ body {
 
 .heading > p:last-of-type {
   margin-top: 2%;
-  font-size: 1.15em;
+  font-size: 2.2vh;
 }
 
 .formbox {
@@ -124,7 +126,7 @@ body {
 
 .formbox > label {
   font-family: "Inter";
-  font-size: 1em;
+  font-size: 2vh;
   font-weight: 500;
 }
 
@@ -134,7 +136,7 @@ body {
   color: #eaeaea;
   padding: 5px 10px;
   font-family: "Inter";
-  font-size: 1rem;
+  font-size: 0.95rem;
   font-weight: 400;
   margin-bottom: 1.5em;
   margin-top: 0.8em;
@@ -142,22 +144,122 @@ body {
   width: 70%;
 }
 
-.formbox > button {
+#submit {
   background-color: transparent;
   border: 2px solid #cccccc;
   color: #eaeaea;
   padding: 0.6rem 1.2rem;
   font-family: "Inter";
-  font-size: 1rem;
+  font-size: 0.95rem;
   font-weight: 400;
   margin-top: 0.5em;
   transition: all 0.2s ease-in-out;
 }
 
-.formbox > button:hover {
+#submit:hover {
   background-color: #eaeaea;
   border-color: #eaeaea;
   color: #000000;
   transition: all 0.2s ease-in-out;
   cursor: pointer;
+}
+
+.resultcontent {
+  flex-direction: column;
+  text-align: center;
+  animation: fadein-and-moveup 1s ease-in-out;
+}
+
+.result {
+  max-width: 100%;
+  animation: none;
+}
+
+.meme > img {
+  max-width: 40%;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+}
+
+@media screen and (max-width: 1400px) {
+  .formbox > input {
+    width: 80%;
+  }
+}
+
+@media screen and (max-width: 1200px) {
+  .form {
+    max-width: 40%;
+  }
+
+  .formbox > input {
+    width: 90%;
+  }
+}
+
+@media screen and (max-width: 810px) {
+  .container {
+    overflow-y: scroll;
+  }
+  .content {
+    flex-direction: column-reverse;
+    margin-top: 40%;
+  }
+  .resultcontent {
+    flex-direction: column;
+  }
+  .heading {
+    max-width: 80%;
+  }
+  .form {
+    margin-top: 15%;
+    max-width: 60%;
+  }
+  .formbox > button {
+    margin-left: 35%;
+  }
+  .footer {
+    margin-top: 5em;
+    position: inherit;
+    margin-bottom: 0.5em;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .container {
+    display: block;
+  }
+  .heading > h1 {
+    font-size: 2.15rem;
+  }
+  .heading > h2 {
+    font-size: 1.2rem;
+  }
+  .heading > p {
+    font-size: 1.1rem;
+  }
+  .heading > p:last-of-type {
+    font-size: 1.1rem;
+  }
+  .formbox > label {
+    font-size: 1rem;
+  }
+  .content {
+    margin-top: 25%;
+  }
+  .form {
+    max-width: 80%;
+  }
+  .meme > img {
+    max-width: 70%;
+  }
+}
+
+@media screen and (max-width: 400px) {
+  .heading {
+    max-width: 85%;
+  }
+  .form {
+    max-width: 85%;
+  }
 }
