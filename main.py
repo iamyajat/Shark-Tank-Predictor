@@ -39,7 +39,7 @@ async def predict(req: Request) -> Response:
         return templates.TemplateResponse("result.html", {"request": req,
                                                           "prediction": round(p[0][1], 2)})
     p = model.predict(data)
-    return HTMLResponse(status_code=200, content=p[0])
+    return HTMLResponse(status_code=200, content=str(bool(p[0])))
 
 if __name__ == "__main__":
     uvicorn.run("main:app", host="0.0.0.0", port=PORT,
