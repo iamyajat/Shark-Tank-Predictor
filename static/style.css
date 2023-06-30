@@ -1,0 +1,163 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+@font-face {
+  font-family: "Araboto";
+  src: url("Araboto Medium 400.ttf") format("truetype");
+}
+
+body {
+  background-image: url("bg.jpg");
+  background-size: cover;
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+}
+
+.container {
+  height: 100%;
+  width: 100%;
+  background-color: #00000099;
+  backdrop-filter: blur(5px);
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  animation: fadein 0.5s ease-in-out;
+}
+
+@keyframes fadein {
+  0% {
+    backdrop-filter: blur(0px);
+  }
+  100% {
+    backdrop-filter: blur(5px);
+  }
+}
+
+.footer {
+  position: absolute;
+  margin-top: auto;
+  bottom: 3px;
+  color: #eaeaea;
+  font-family: "Inter";
+  text-align: center;
+  width: 100%;
+  letter-spacing: 1px;
+  animation: fadein-and-moveup 1s ease-in-out 0.2s;
+}
+
+.footer > a {
+  text-decoration: none;
+  color: #eaeaea;
+  font-weight: 500;
+}
+
+.content {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  max-width: 95%;
+  max-height: 98%;
+  color: #eaeaea;
+}
+
+@keyframes fadein-and-moveup {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0px);
+  }
+}
+
+.form {
+  max-width: 30%;
+  width: 100%;
+  animation: fadein-and-moveup 1s ease-in-out;
+}
+
+.heading {
+  max-width: 40%;
+  width: 100%;
+  animation: fadein-and-moveup 1s ease-in-out 0.1s;
+}
+
+.heading > h1 {
+  position: relative;
+  font-family: "Araboto";
+  font-size: 3em;
+  text-transform: uppercase;
+  left: -3px;
+}
+
+.heading > h2 {
+  font-family: "Inter";
+  font-weight: 500;
+  font-size: 1.2em;
+  text-transform: uppercase;
+}
+
+.heading > p {
+  font-family: "Inter";
+  font-size: 1.1em;
+  font-weight: 400;
+}
+
+.heading > p:first-of-type {
+  margin-top: 5%;
+}
+
+.heading > p:last-of-type {
+  margin-top: 2%;
+  font-size: 1.15em;
+}
+
+.formbox {
+  position: relative;
+}
+
+.formbox > label {
+  font-family: "Inter";
+  font-size: 1em;
+  font-weight: 500;
+}
+
+.formbox > input {
+  background-color: transparent;
+  border: 2px solid #eaeaea;
+  color: #eaeaea;
+  padding: 5px 10px;
+  font-family: "Inter";
+  font-size: 1rem;
+  font-weight: 400;
+  margin-bottom: 1.5em;
+  margin-top: 0.8em;
+  height: 2em;
+  width: 70%;
+}
+
+.formbox > button {
+  background-color: transparent;
+  border: 2px solid #cccccc;
+  color: #eaeaea;
+  padding: 0.6rem 1.2rem;
+  font-family: "Inter";
+  font-size: 1rem;
+  font-weight: 400;
+  margin-top: 0.5em;
+  transition: all 0.2s ease-in-out;
+}
+
+.formbox > button:hover {
+  background-color: #eaeaea;
+  border-color: #eaeaea;
+  color: #000000;
+  transition: all 0.2s ease-in-out;
+  cursor: pointer;
+}

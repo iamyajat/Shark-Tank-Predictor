@@ -1,0 +1,36 @@
+{% extends "index.html" %} {% block mainpage %}
+<div class="content">
+  <div class="form">
+    <div class="formbox">
+      <label>Ask Amount</label><br />
+      <input
+        name="ask_amount"
+        placeholder="Amount you expect from the sharks"
+      /><br />
+      <label>Max Equity</label><br />
+      <input
+        name="max_equity"
+        placeholder="Max Equity you will give the sharks"
+      /><br />
+      <label>Ask Valuation</label><br />
+      <input
+        name="ask_valuation"
+        placeholder="Valuation of your company"
+      /><br />
+      <button id="submit" onclick="submit()">Submit 🔥</button>
+    </div>
+  </div>
+  <div class="heading">
+    <h1>Can you Pitch ?</h1>
+    <h2>We'll tell you, don't worry :&#41;</h2>
+    <p>
+      Pitching. It's all about summoning your inner superhero and transforming
+      into the Salesman of Steel. Forget the cape, though – your superpower is
+      pitching to a panel of fierce business moguls without breaking a sweat or
+      accidentally tripping over your own words.
+    </p>
+    <br />
+    <p>Are you ready? (we'll take that as a yes anyway)</p>
+  </div>
+</div>
+{% endblock %}
